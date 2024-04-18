@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkUs 2k24 Register Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="images/logo2.png"  type="image/x-icon">
+    <!-- <script src="form.js"></script> -->
+</head>
+<body style="height: 100vh; margin: 0; padding: 0;">
+    <div class="form-container">
+        <h2 align="center">MARKUS</h2>
+        <h2 align="center"><p>Note: Participants can participate in 2 Technical and Non-Technical Events </p></h2>
+        <form  name="form-data" method="post">
+            <div class="form-group">
+                <label for="username">Name </label>
+                <input type="text" id="username" name="Username" required>
+                <span id="usernameError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="roll">Roll No:&nbsp&nbsp(21ISR032)</label>
+                <input type="text" id="roll" name="Roll" required>
+                <span id="rollError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" required>
+                <span id="emailError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Contact</label>
+                <input type="tel" id="phone" name="Phone" required>
+                <span id="phoneError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="degree">Degree:&nbsp&nbsp(Eg:MSc)</label>
+                <input type="text" id="degree" name="Degree" required>
+                <span id="degreeError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:&nbsp&nbsp(Eg:Software Systems)</label>
+                <input type="text" id="branch" name="Branch" required>
+                <span id="branchError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <h4>Technical Events</h4>
+                <input type="checkbox" id="paperPresentation" name="PaperPresentation" value="PaperPresentation">PAPER PRESENTATION
+                <br><input type="checkbox" id="projectPresentation" name="ProjectPresentation" value="ProjectPresentation">PROJECT PRESENTATION
+                <br><input type="checkbox" id="codingMania" name="CodingMania" value="CodingMania">CODING MANIA
+                <br><input type="checkbox" id="mathCon" name="MathCon" value="MathCon">MATHCON
+                <span id="eventsError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <h4>Non-Technical Events</h4>
+                <input type="checkbox" id="scramblers" name="Scramblers" value="Scramblers">SCRAMBLERS
+                <br><input type="checkbox" id="memeCreation" name="MemeCreation" value="MemeCreation">MEME CREATION
+                <br><input type="checkbox" id="adzap" name="ADZAP" value="ADZAP">ADZAP
+            </div>
+
+            <div class="form-group">
+                <h4>Year of Study</h4>
+                <input type="radio" id="I" name="YearofStudy" value="I">I
+                <input type="radio" id="II" name="YearofStudy" value="II">II
+                <input type="radio" id="III" name="YearofStudy" value="III">III
+                <input type="radio" id="IV" name="YearofStudy" value="IV">IV
+                <input type="radio" id="Others" name="YearofStudy" value="Others">Others
+                <span id="YearofStudyError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <h4>Have you joined WhatsApp Group</h4>
+                <a href="https://chat.whatsapp.com/BZbET1PGnx1JhQN5GUzbTq">Click Here
+                </a>
+                <br>
+                <br>
+                <input type="radio" id="yes" name="Join" value="yes">YES
+                <input type="radio" id="no" name="Join" value="no">NO
+            </div>
+           
+            <button type="submit" id="submit" value="Register">Register</button>
+        </form>
+    </div>
+    
+    <script>  const scriptURL = 'https://script.google.com/macros/s/AKfycbzKEOmAy-wgGwtwfg6hmLGgoTLvi4PLb1hfDlazhVD3xAI1pY-DoFbnbawO6vnQRvHn/exec';
+
+const form = document.forms['form-data'];
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const url = `${scriptURL}?${new URLSearchParams(formData).toString()}`;
+  fetch(url, { method: 'POST'})
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert("Thank you! Your form is submitted successfully.");
+      window.location.href="./index.html";
+    })
+    .catch(error => console.error('Error!', error.message));
+});
+
+    </script>
+
+<script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var roll = document.getElementById("roll").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var degree = document.getElementById("degree").value;
+        var branch = document.getElementById("branch").value;
+        var paperPresentation = document.getElementById("paperPresentation").checked;
+        var projectPresentation = document.getElementById("projectPresentation").checked;
+        var codingMania = document.getElementById("codingMania").checked;
+        var techXperience = document.getElementById("techXperience").checked;
+        var scramblers = document.getElementById("scramblers").checked;
+        var memeCreation = document.getElementById("memeCreation").checked;
+        var yearOfStudy = document.querySelector('input[name="yearOfStudy"]:checked');
+        var joinedWhatsAppGroup = document.querySelector('input[name="joinedWhatsAppGroup"]:checked');
+
+        var usernameError = document.getElementById("usernameError");
+        var rollError = document.getElementById("rollError");
+        var emailError = document.getElementById("emailError");
+        var phoneError = document.getElementById("phoneError");
+        var degreeError = document.getElementById("degreeError");
+        var branchError = document.getElementById("branchError");
+        var eventsError = document.getElementById("eventsError");
+        var yearOfStudyError = document.getElementById("yearOfStudyError");
+
+        var usernameRegex = /^[a-zA-Z0-9_]+$/;
+        var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var phoneRegex = /^[0-9]+$/;
+
+        var rollRegex = /^[a-zA-Z0-9_]+$/;
+        if (!usernameRegex.test(username)) {
+            usernameError.innerHTML = "Invalid username (alphanumeric characters only).";
+            return false;
+        } else {
+            usernameError.innerHTML = "";
+        }
+        if (!rollRegex.test(roll)) {
+            rollError.innerHTML = "Invalid roll number (alphanumeric characters only).";
+            return false;
+        } else {
+            rollError.innerHTML = "";
+        }
+        if (!emailRegex.test(email)) {
+            emailError.innerHTML = "Invalid email address.";
+            return false;
+        } else {
+            emailError.innerHTML = "";
+        }
+        if (!/^[0-9]{10}$/.test(phone)) {
+            phoneError.innerHTML = "Invalid phone number.";
+            return false;
+        } else {
+            phoneError.innerHTML = "";
+        }
+        if (degree.trim() === "") {
+            degreeError.innerHTML = "Degree is required.";
+            return false;
+        } else {
+            degreeError.innerHTML = "";
+        }
+        if (branch.trim() === "") {
+            branchError.innerHTML = "Branch is required.";
+            return false;
+        } else {
+            branchError.innerHTML = "";
+        }
+        if (!(paperPresentation || projectPresentation || codingMania || techXperience)) {
+            eventsError.innerHTML = "Select at least one technical event.";
+            return false;
+        } else {
+            eventsError.innerHTML = "";
+        }
+        if (!yearOfStudy) {
+            yearOfStudyError.innerHTML = "Select year of study.";
+            return false;
+        } else {
+            yearOfStudyError.innerHTML = "";
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>

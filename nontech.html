@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Non-Technical</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="markus/images/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="markus/event.css" />
+  <link rel="icon" href="markus/images/logo2.png" type="image/x-icon">
+</head>
+
+<body onmousedown="return false" onselectstart="return false">
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'V'.charCodeAt(0)) {
+        return false;
+      }
+    } 
+  </script>
+  <section>
+    <header class="header">
+      <a href="#" class="logo">MARKUS</a>
+      <i class='bx bx-menu' onclick="Toggle()" id="menu-icon"></i>
+      <nav class="navbar" id="nav">
+        <a href=".index.html">Home</a>
+        <div class="dropdown">
+          <a href="index.html#events" class="nav-btn">Events</a>
+          <div class="dropdown-content" style="width: 130px;">
+            <a href="techevent.html"><i class='bx bx-code-alt'></i>Technical</a>
+            <a href="nontech.html"><i class='bx bx-trophy'></i>Non-Technical</a>
+          </div>
+        </div>
+        <a href="Team.html">Team</a>
+        <!--<a href="./form.html">Register</a>-->
+        <a href="#footer">Contact</a>
+      </nav>
+    </header>
+    <!--<div class="col" style="display: flex; justify-content: center; align-items: center;">
+      <button type="button" class="btn btn-outline-info" data-aos="fade-up" style="font-size: 20px;">Past Glimpses</button>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/tech 1.jpg" style="height: fit-content;" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size: 76px; color: rgb(249, 250, 250);"></h5>
+            <h3></h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/tech 2.jpg" d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="font-size: 76px; color: rgb(249, 250, 250);"></h1>
+            <h2> </h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/tech 3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="font-size: 76px; color: rgb(249, 250, 250);"></h1>
+            <h5></h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>-->
+    <div class="container button">
+      <div class="row" style="text-align:center">
+        <div class="col">
+          <button type="button" class="btn btn-outline-info" data-aos="fade-up">Upcoming Events</button>
+        </div>
+      </div>
+      <div class="container card-container" data-aos="fade-up">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-150">
+              <img src="images/scramblers.jpeg" class="card-img-top" alt="..." height="350">
+              <div class="card-body">
+                <h5 class="card-title">Scramblers</h5>
+                <div class="card-text">
+                  <div class="card-text"><b>Coordinator: Sivanesh M</b></div>
+                  <div class="card-text"><b>Phone no: 8428810130</b></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>* Film enthusiasts can participate <br>
+                  * Team size can be up to three(minimum 2 maximum 3).<br>
+                  * There will be three rounds in all</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-150">
+              <img src="images/meme.jpg" class="card-img-top" alt="..." height="350">
+              <div class="card-body">
+                <h5 class="card-title">Meme Creation</h5>
+                <div class="card-text">
+                  <div class="card-text"><b>Coordinator: Dhibeesh</b></div>
+                  <div class="card-text"><b>Phone no: 9597481818</b></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>Topic Will be Given Onspot.<br>
+                  *Based on the Topic the memes should be designed.<br>
+                  *Memes will be Designed Within in the given time.<br>
+                  *No Vulnerability words should be added in that meme.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-150">
+              <img src="images/marketing.png" class="card-img-top" alt="..." height="350">
+              <div class="card-body">
+                <h5 class="card-title">ADZAP</h5>
+                <div class="card-text">
+                  <div class="card-text"><b>Coordinator: Pradeep M</b></div>
+                  <div class="card-text"><b>Phone no: 9361780134</b></div>
+                </div>
+              </div>
+              <div class="card-back">
+                <p>A team can consist maximum of 2 members.<br>
+                  *Here the marketing capabilities in selling a really or non-existing product will be tested.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+  <footer class="footer" id="footer">
+    <div class="followus" data-aos="fade-right" data-aos-offset="100">
+      <h2 class="footer-heading">Follow Us</h2>
+      <div>
+        <div class="social-media-footer">
+          <a href="https://www.instagram.com/kec._family/?utm_source=qr&r=nametag" target="_blank"><i
+              class='bx bxl-instagram'></i></a>
+          <a href="https://www.linkedin.com/in/kec-msc-ctpg-658616244/" target="_blank"><i
+              class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="contactus" data-aos="fade-left" data-aos-offset="100">
+      <h2 class="footer-heading">Contact Us</h2>
+      <div class="contactus-content">
+        <p><span>Address</span> : Thoppupalayam, Kumaran Nagar, Perundurai, Tamil Nadu 638060</p>
+        <p><span>Email</span> : symitec2k24@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+  <center>
+    <footer>Designed & Developed by Balajisrinath R, Nivetha S, Nandhini S</footer>
+  </center>
+  <script href="./app.js"></script>
+  <script>
+    function Toggle() {
+      const navbar = document.getElementById("nav");
+      console.log('clicked');
+      if (navbar.style.display === "block") {
+        navbar.style.display = "none";
+      }
+      else {
+        navbar.style.display = "block";
+      }
+
+    }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 300,
+    });
+  </script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

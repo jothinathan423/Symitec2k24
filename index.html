@@ -1,185 +1,217 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-        <title>Symitec | 2K24</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="theme-color" content="#333333">
-        <meta name="mobile-web-app-capable" content="yes">
-        
-        <link rel="apple-touch-icon" href="img/plogo2k15.png">
-        <link rel="shortcut icon" href="img/plogo2k15.png" type="image/x-icon" />
-        
-        <!-- Place favicon.ico in the root directory -->
-        <!-- here all are from markus -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" type="image/x-icon" href="markus/images/favicon.ico">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="markus/stylesheets/style.css" />
-        <link rel="icon" href="markus/images/logo2.png" type="image/x-icon">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <title>Symitec | 2K24</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBQ5TP972L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EBQ5TP972L');
+  </script>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#333333">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="apple-touch-icon" href="img/plogo2k15.png">
+  <link rel="shortcut icon" href="img/plogo2k15.png" type="image/x-icon" />
+
+  <!-- Place favicon.ico in the root directory -->
+  <!-- here all are from markus -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="markus/images/favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="markus/stylesheets/style.css" />
+  <link rel="icon" href="markus/images/logo2.png" type="image/x-icon">
 
 
 
-        <style media="screen">
-          html, body{
-            overflow-y: hidden;
-          }
+  <style media="screen">
+    html,
+    body {
+      overflow-y: hidden;
+    }
 
-          .sympoi{
-            color: black;
-          }
+    .sympoi {
+      color: black;
+    }
 
-          #loading-screen{
-            background-color: #cd2929;
-            float: left;
-            position: absolute;
-            z-index: 25;
-          }
-          .loader-box{
-            width: 500px;
-            height: auto;
-            margin: auto auto;
-            position:absolute;
-             left:50%;
-             top:50%;
-             margin-left:-200px;
-             margin-top:-50px;
-             box-sizing: border-box;
-          }
-          .loader-message{
-            float: right;
-            height: 75px;
-            margin-top: -50px;
-            box-sizing: border-box;
-            text-align: left;
-            width: 80%;
-            color: #fff;
-            font-family: Helvetica, Arial, sans-serif;
-            font-variant: small-caps;
-            font-size: 24px;
-          }
-          .loading {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: solid 10px rgba(255, 255, 255, 0.2);
-            border-top-color: #FFF;
-            animation: spin 1s infinite linear;
-          }
-          @keyframes spin {
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-          @media only screen and (min-width: 320px) and (max-width:549px){
-              .loader-box{margin-left: -240px;}
-              .loading{position: relative; bottom: 80px;
-              left:40%;}
-          }
+    #loading-screen {
+      background-color: #cd2929;
+      float: left;
+      position: absolute;
+      z-index: 25;
+    }
+
+    .loader-box {
+      width: 500px;
+      height: auto;
+      margin: auto auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -200px;
+      margin-top: -50px;
+      box-sizing: border-box;
+    }
+
+    .loader-message {
+      float: right;
+      height: 75px;
+      margin-top: -50px;
+      box-sizing: border-box;
+      text-align: left;
+      width: 80%;
+      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      font-variant: small-caps;
+      font-size: 24px;
+    }
+
+    .loading {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: solid 10px rgba(255, 255, 255, 0.2);
+      border-top-color: #FFF;
+      animation: spin 1s infinite linear;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width:549px) {
+      .loader-box {
+        margin-left: -240px;
+      }
+
+      .loading {
+        position: relative;
+        bottom: 80px;
+        left: 40%;
+      }
+    }
 
 
-          .gopi{
-                flex: 1 1 30rem;
-    background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--sec-bg-color);
-    transition: .5s ease;
-          }
-        </style>
-<!-- <<<<<<< HEAD -->
+    .gopi {
+      flex: 1 1 30rem;
+      background: var(--bg-color);
+      padding: 3rem 2rem 4rem;
+      border-radius: 2rem;
+      text-align: center;
+      border: .2rem solid var(--sec-bg-color);
+      transition: .5s ease;
+    }
+  </style>
+  <!-- <<<<<<< HEAD -->
 
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <!-- <link rel="stylesheet" href="css/skeleton.css" /> -->
-        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="css/skeleton.css" /> -->
+  <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 
-<!-- ======= -->
-<!-- >>>>>>> origin/master -->
-    </head>
-    <body onmousedown="return false" onselectstart="return false">
-      
-        <!--[if lt IE 8]>
+  <!-- ======= -->
+  <!-- >>>>>>> origin/master -->
+</head>
+
+<body onmousedown="return false" onselectstart="return false">
+
+  <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div id="loading-screen">
-          <div class="loader-box"><div class="loading"></div><div class="loader-message">Welcome to Symitec 2k24 . . .</div></div>
-        </div>
+  <!-- Add your site or application content here -->
+  <div id="loading-screen">
+    <div class="loader-box">
+      <div class="loading"></div>
+      <div class="loader-message">Welcome to Symitec 2k24 . . .</div>
+    </div>
+  </div>
 
-        <script type="text/javascript">
-          window.onbeforeunload = function(){
-            window.scrollTo(0,0);
-          }
-          var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-          var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-          document.getElementById('loading-screen').setAttribute("style","width:100%; height:100%;");
-          document.getElementById('loading-screen').style.width='100%';
-          document.getElementById('loading-screen').style.height='100%';
-        </script>
+  <script type="text/javascript">
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    document.getElementById('loading-screen').setAttribute("style", "width:100%; height:100%;");
+    document.getElementById('loading-screen').style.width = '100%';
+    document.getElementById('loading-screen').style.height = '100%';
+  </script>
 
-        <header class="top-bar ">
-          <div class="wrap960">
-            <!-- <div class="logo-box"><div class="logo"><a href="index.html"><p>Paradigm</p></a></div></div> -->
-            <div class="menu-button"> </div>
-            <div class="nav-box">
-              <ul class="nav">
-<!--                 
+  <header class="top-bar ">
+    <div class="wrap960">
+      <!-- <div class="logo-box"><div class="logo"><a href="index.html"><p>Paradigm</p></a></div></div> -->
+      <div class="menu-button"> </div>
+      <div class="nav-box">
+        <ul class="nav">
+          <!--                 
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li> -->
-                <li><a href="markus/techevent.html">Technical Events</a></li>
-                <li><a href="markus//nontech.html">Non - Technical Events</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSefq5ntZ6DenuwiExVnlNtD84NNAfdfXl1o-70-tyLG3JFRsg/viewform?vc=0&c=0&w=1&flr=0">Register</a></li>
-              </ul>
-            </div>
-          </div>
-        </header>
+          <li><a href="markus/techevent.html">Technical Events</a></li>
+          <li><a href="markus//nontech.html">Non - Technical Events</a></li>
+          <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSefq5ntZ6DenuwiExVnlNtD84NNAfdfXl1o-70-tyLG3JFRsg/viewform?vc=0&c=0&w=1&flr=0">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-        <div name="Home" class="home-slide">
-          <div class="overlay-pattern">
-            <div class="para-slide">
-              <div class="pre-para invisible">get</div>
-                <div class="para">Sym</div><div class="digm">itec</div>
-                <div class="post-para">2k24</div>
-            </div>
-          </div>
-        </div>
+  <div name="Home" class="home-slide">
+    <div class="overlay-pattern">
+      <div class="para-slide">
+        <div class="pre-para invisible">get</div>
+        <div class="para">Sym</div>
+        <div class="digm">itec</div>
+        <div class="post-para">2k24</div>
+      </div>
+    </div>
+  </div>
 
-        <div name="About" class="about-container" >
-          <div class="section-title">About<p>&diams;&nbsp;&diams;&nbsp;&diams;</p></div>
-          <div class="about-para">
-                <p class="sympoi"><span>Symitec</span> is an annual national technical symposium organized by the <span>Department of Information Technology
-                   </span>.<br>It is conducted by the students and the <span>Association of Information Technology</span>
-                    every year.<br> As a jewel in the crown, Symitec attracts several thousand students from hundreds of <br>colleges
-                     and universities across India.
-                  </p>
-          </div>
-          <div class="main-logo-container">
-            <div class="main-logo">
-                <img src="img/plogo2k15.png" width="100%"/>
-            </div>
-          </div>
-          <div class="para-detail-container">
-            <div class="num-event" style="color: black;">
-                <span>six</span><br>events
-            </div>
-            <div class="event-date" style="color: black;">
-                <span>April 30, 2024</span><br>event date
-            </div>
-            <div class="cash-prize" >
-                <span> exciting Prizes</span><br>
-            </div>
-          </div>
+  <div name="About" class="about-container">
+    <div class="section-title">About<p>&diams;&nbsp;&diams;&nbsp;&diams;</p>
+    </div>
+    <div class="about-para">
+      <p class="sympoi"><span>Symitec</span> is an annual national technical symposium organized by the <span>Department
+          of Information Technology
+        </span>.<br>It is conducted by the students and the <span>Association of Information Technology</span>
+        every year.<br> As a jewel in the crown, Symitec attracts several thousand students from hundreds of
+        <br>colleges
+        and universities across India.
+      </p>
+    </div>
+    <div class="main-logo-container">
+      <div class="main-logo">
+        <img src="img/plogo2k15.png" width="100%" />
+      </div>
+    </div>
+    <div class="para-detail-container">
+      <div class="num-event" style="color: black;">
+        <span>six</span><br>events
+      </div>
+      <div class="event-date" style="color: black;">
+        <span>April 30, 2024</span><br>event date
+      </div>
+      <div class="cash-prize">
+        <span> exciting Prizes</span><br>
+      </div>
+    </div>
 
-        </div>
+  </div>
 
-        <!-- <div name="Team" class="team-container">
+  <!-- <div name="Team" class="team-container">
           <div class="black-overlay">
             <div class="section-title member-detail">Core Team<p>&diams;&nbsp;&diams;&nbsp;&diams;</p></div>
             <div class="container">
@@ -205,61 +237,67 @@
                 </div>
               </div> -->
 
-              <!-- <div class="row">
+  <!-- <div class="row">
                 <div class="six columns"><span class="member-name"><a target="_blank" href="https://www.facebook.com/davidbala777">David Bala A</a></span><br><span class="member-post">Associate Secretary</span></div>
                 <div class="six columns"><span class="member-name"><a target="_blank" href="https://www.facebook.com/SudarAbisheck.S">Sudar Abisheck S</a></span><br><span class="member-post">Associate Coordinator</span></div>
               </div> -->
 
-            </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="container-fluid">
+    <section class="events" id="events">
+      <h2 class="heading" data-aos="fade-up">Events</h2>
+      <div class="row">
+        <div class="col-lg-2 gopi col-md-4 col-sm-12 m-2 " data-aos="fade-up" data-aos-delay="100">
+          <div class="event-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Technical</h3>
+            <p>Join us for our upcoming technical event! Learn and engage in technology. Our event offers something for
+              everyone. Mark your calendars and stay tuned for more details!</p>
+            <p>Registration Opened!</p>
+            <a href="markus/techevent.html" class="btn">Know More</a>
           </div>
         </div>
-
-<div class="container-fluid">
-  <section class="events" id="events">
-    <h2 class="heading" data-aos="fade-up">Events</h2>
-    <div class="row">
-      <div class="col-lg-2 gopi col-md-4 col-sm-12 m-2 " data-aos="fade-up" data-aos-delay="100">
-        <div class="event-box">
-          <i class='bx bx-code-alt'></i>
-          <h3>Technical</h3>
-          <p>Join us for our upcoming technical event! Learn and engage in technology. Our event offers something for
-            everyone. Mark your calendars and stay tuned for more details!</p>
-          <p>Registration Opened!</p>
-          <a href="markus/techevent.html" class="btn">Know More</a>
+        <div class="col-lg-2 gopi col-md-4 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="event-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Non-Technical</h3>
+            <p>Experience the magic of our community picnic! Join us for a day of fun and friendship at the local park.
+              Bring your favorite snacks and games, and enjoy the sunshine with friends and family.</p>
+            <p>Registration Opened!</p>
+            <a href="markus/nontech.html" class="btn">Know More</a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-2 gopi col-md-4 col-sm-12" data-aos="fade-up" data-aos-delay="100">
-        <div class="event-box">
-          <i class='bx bx-code-alt'></i>
-          <h3>Non-Technical</h3>
-          <p>Experience the magic of our community picnic! Join us for a day of fun and friendship at the local park.
-            Bring your favorite snacks and games, and enjoy the sunshine with friends and family.</p>
-          <p>Registration Opened!</p>
-          <a href="markus/nontech.html" class="btn">Know More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
 
 
-        <!-- <div name="Events" class="event-container">
+  <!-- <div name="Events" class="event-container">
 
             <div class="container">
             -->
 
-          <div name="Register" class="register-container">
-            <div class="black-overlay">
-              <div class="section-title member-detail">Register<p>&diams;&nbsp;&diams;&nbsp;&diams;</p></div>
-              <div class="register-info">Registrations will Close on <span style="color:#cd2929">30th April</span><br><br><br><a class="reg-button" href="https://docs.google.com/forms/d/e/1FAIpQLSefq5ntZ6DenuwiExVnlNtD84NNAfdfXl1o-70-tyLG3JFRsg/viewform?vc=0&c=0&w=1&flr=0">Register Now</a><br><br><br></div>
-            </div>
-          </div>
-          <div name="Map" class="ssn-map">
-            <div class="map-line"></div>
-            <iframe  frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.4855869817943!2d78.22349597489276!3d11.444834988747486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babc1715c795d63%3A0x2bef5041ead73b0d!2sMuthayammal%20Engineering%20College%20(Autonomous)!5e0!3m2!1sen!2sin!4v1713328838899!5m2!1sen!2sin" allowfullscreen></iframe>
-            <div class="map-line"></div>
-            <!-- <div class="contact-us">
+  <div name="Register" class="register-container">
+    <div class="black-overlay">
+      <div class="section-title member-detail">Register<p>&diams;&nbsp;&diams;&nbsp;&diams;</p>
+      </div>
+      <div class="register-info">Registrations will Close on <span style="color:#cd2929">30th April</span><br><br><br><a
+          class="reg-button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSefq5ntZ6DenuwiExVnlNtD84NNAfdfXl1o-70-tyLG3JFRsg/viewform?vc=0&c=0&w=1&flr=0">Register
+          Now</a><br><br><br></div>
+    </div>
+  </div>
+  <div name="Map" class="ssn-map">
+    <div class="map-line"></div>
+    <iframe frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.4855869817943!2d78.22349597489276!3d11.444834988747486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babc1715c795d63%3A0x2bef5041ead73b0d!2sMuthayammal%20Engineering%20College%20(Autonomous)!5e0!3m2!1sen!2sin!4v1713328838899!5m2!1sen!2sin"
+      allowfullscreen></iframe>
+    <div class="map-line"></div>
+    <!-- <div class="contact-us">
               <div style="width:70%;"></div>
               <div style="background:#cd2929; width:30%; padding: 20px;">
                 <b><span style="font-size: 1.2em">Contact Us:</span></b><br>
@@ -269,23 +307,23 @@
               </div>
             </div> -->
 
-          </div>
+  </div>
 
   <!-- FOOTER -->
-          <footer>
-            <div class="foot">
-              Copyright &copy; 2024 Symitec.<br />
-              Sculptured  By <a href="https://jothinathan423.github.io/samples/task2/">Jothinathan N</a>
-            </div>
-          </footer>
+  <footer>
+    <div class="foot">
+      Copyright &copy; 2024 Symitec.<br />
+      Sculptured By <a href="https://jothinathan423.github.io/samples/task2/">Jothinathan N</a>
+    </div>
+  </footer>
 
   <!-- FOOTER ENDS -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <!--<script src="js/plugins.js"></script>-->
-        <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+  <!--<script src="js/plugins.js"></script>-->
+  <script src="js/main.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
              function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -296,14 +334,15 @@
         </script> -->
 
 
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-          <script>
-            AOS.init({
-              offset: 300,
-              duration: 750,
-            });
-          </script>
-          <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-          <script type="text/javascript" src="markus/app.js"></script>
-    </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 750,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="markus/app.js"></script>
+</body>
+
 </html>
